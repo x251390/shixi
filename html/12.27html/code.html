@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>code练习</title>
+    <style>
+    table{
+         /* 两根线合为一根线 */
+         border-collapse:collapse;
+         table-layout:fixed;
+
+    }
+    
+    </style>
+</head>
+<body>
+    <!-- 表格table -->
+    <!-- 基本格式
+    <table border="1" 边框线宽度
+           height="22" 边框高度，
+           width="55"  表格宽度
+           cellpadding="22" 单元格与内容之间的距离 上下左右都有
+           cellspacing="22" 单元格与单元格之间的距离
+           bgcolor="#333" 背景颜色 可以放在不同的位置 table tr td
+           bordercolor="#333" 边框颜色
+           align="left center right" 表示的是表格位置（table）如果放在其他的位置就是文字的就是控制文字的位置左右
+           valign="top middle bottom" 控制文字垂直对齐方式 不能写在table中  控制上下
+   注意：折叠边框线在css中border-collapse：collapse；
+         表格宽度的平均分配  table{table-layout:fixed;  //table{table-layout:fixed}}            
+    
+    表格的结构化（几乎没有任何意义只是用于结构化）
+        表头：thead里面是th会有自动加粗 文字居中的效果
+        表身体：tbody
+        表尾：tfoot
+        标题：caption  会自动居中并有加粗效果  
+        colspan:列跨
+        rowspan：行跨
+        当在不同表格结构化中时不能使用colspan和rowspan
+-->
+     <!-- <table cellpadding="2" cellspacing="3" bgcolor="red" align="center" 
+     width="1000" height="500" bodercolor="blue" border="2">
+     <caption>表格的标题</caption> 
+     <thead>
+         <tr>
+         <th colspan="2">一</th>
+         
+         <th>三</th>
+         <th>四</th>
+        </tr>
+     </thead>
+     <tbody>
+         <tr valign="bottom">
+            <td colspan="2" align="left">11</td>
+           
+            <td valign="top">33</td>
+            <td valign="bottom" >44</td>
+
+         </tr>
+     </tbody>
+    <tfoot>
+        <tr>
+          <td >yi</td>
+          <td>er</td>
+          <td>sa</td>
+          <td >si</td>
+        </tr>
+       
+
+    </tfoot>
+</table> -->
+
+
+<!-- 表单 -->
+
+<!-- form标签action是提交的页面，method（方法）以什么方式提交，有get
+    <form action="#" method="post">
+与post两种方式
+            区别：get（传输内容少，不安全）
+            post：大小没有限制 安全是封装后的，推荐使用post
+             name属性：
+                 作用：向后台提交数据必须拥有name
+                 在单选与多选中name必须一致，单选中不一致的话就不是同一组数据可多选
+                 在select中时name属性写在select中因为这是一组数据
+        value属性：向后台提交数据时就是提交的value
+                   在文本框与文本域中表示的是默认值
+                   在按钮中就是表示按钮的值
+                   在下拉框中可以不写，写了就是value的值不写就是option中的值
+       maxlength属性：应用于text textarea 
+       disabled（布尔属性）：禁用属性  禁止读取， 禁止修改， 禁止提交 所有控件都可以使用
+       readonly()：只读属性 不能修改，可以提交数据
+       checked（）：在单选与多选中设置默认选项，单选中只能选择一个，多选中可以选择多个！！！！！！！！！！！！！！！！！！
+       selected（）：下拉框中的默认选项   size=“2”下拉框中显示的最大格数，multiple（）设置下拉框的多选
+                     分开多选按住ctrl
+   文本域（设置宽高）textarea{resize：none} cols=“宽”   rows='高'
+   
+   label标签
+        点击label将焦点聚焦到input上
+    <label><input type="text" name="yi" value=“文本框”></label>                                          
+   placeholder属性：占位符不能和value一起使用因为优先级不够，推荐使用placeholder
+   向后台提交的数据永远是value  
+后台使用的input框
+      文件上传框file
+      隐藏域：hidden   
+
+      </form>
+  -->
+         
+<style>
+textarea{
+    resize:none;
+
+}
+
+</style>
+<form action="#" method="get">
+<input type="text" value="这就是提交的值value" name="这是每一个提交的值都必须拥有的属性">
+ <input type="text" name="t" placeholder="这是占位符，" >
+ <input type="file" name="yi">
+ <input type="radio" name="sex" value="男">男
+ <input type="radio" name="sex" value="女">女
+ <!-- 在这里name必须相同 value就表示的是提交的东西 -->
+ <input type="text" disabled value="这是禁用的属性不能提交，不能修改，不能读取" name="d">
+ <input type="text" readonly value="设置只读属性 不能修改，可以提交" name="r">
+<input type="text" maxlength="9" name="m" value="这是设置最多输入多少个字符">
+<!-- 多选按钮 -->
+<input type="checkbox" name="user" value="男">男
+<input type="checkbox" name="user" value="女">女
+<input type="checkbox" name="user" value="男女" checked>男女
+<!-- 文本域 -->
+<textarea name="wen"  cols="30" rows="10" placeholder="这是文本域"></textarea>
+ <!-- 下拉列表  这里可以不写value 是option里面的值-->
+ <select name="xia" size= "5"  multiple>
+<option value="yi" name="11">苹果</option>
+<option selected>梨子</option>
+<option value="">香蕉</option>
+</select>
+<input type="image" src="../vue/">
+
+<input type="submit" name="b" >
+<input type="button" name="b" ><input type="reset" name="b"  value="重置" >
+<button  type="button" name="y">普通</button>
+<button  type="submit" name="y">提交</button>
+<button  type="reset" name="y" value="重置">重置</button>
+<!-- 不设置的话默认是submit -->
+
+
+
+
+
+
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>

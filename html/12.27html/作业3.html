@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=作业3, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    table{
+        border-collapse:collapse;
+    }
+    .yi{
+        color:blue;
+    }
+    .er{
+        color:red;
+    }
+   
+table tr td:first-child{
+ 
+text-align: right;
+  
+} 
+strong{
+    float:left;
+    text-align: left;
+}
+    
+    </style>
+    <title>作业3</title>
+</head>
+<body>
+   <form action="#" method="post">
+        <table border="2" width="1200" height="100">
+           <col align="right" />
+     <thead>
+            <td colspan="3"><strong>
+                1.会员登录名和密码</strong></td>
+    </thead>
+     <tr>
+         <td>用户名：</td>
+         <td><input type="text" name="yi">*</td>
+         <td>
+             <button type="submit" name="jian">检测用户名</button>
+             <span class="yi">5-15位，请使用英文（a-z),数字（0-9)
+                 密码不能与登录名相同；易记；难猜；
+             </span>    
+         </td>
+     </tr>
+     <tr>
+         <td>密码：</td>
+         <td>
+            <input type="password" name="mi">*
+         </td>
+         <td>
+            <span class="yi">5-15位，请使用英文（a-z),数字（0-9)注意区大小写；
+                        密码不能与登录名相同；易记；难猜；
+             </span>  
+         </td>
+     </tr>
+     <tr>
+         <td>再次输入密码：</td>
+         <td> <input type="password" name="mi">*</td>
+         <td>
+             <span class="yi">两次输入的密码必须一致
+             </span>
+         </td>
+     </tr>
+     <tr>
+         <td colspan="3"><strong> 2.姓名和联系方式</strong></td>
+     </tr>
+     <tr>
+         <td>真实姓名：</td>
+         <td><input type="text" name="zhen">*</td>
+         <td><input type="radio" name="set" value="nan">先生&emsp;<input type="radio"
+             name="set" value="nv">小姐</td>
+     </tr>
+     <tr>
+         <td>电子邮箱：</td>
+         <td><input type="text" value="" name="dian">*</td>
+         <td>
+             <span class="er">非常重要</span><br>
+             <span class="yi">这是客户与您联系的首要方式，请一定要填写正式</span>
+        </td>
+     </tr>
+     <tr>
+         <td>固定电话：</td>
+         <td> <input type="text" name="gu">*</td>
+         <td><span class="yi">区号+电话号码</span></td>
+     </tr>
+     <tr>
+         <td>公司所在地：</td>
+         <td colspan="2">
+              <select name="gong" id="">
+                      <option value="" selected>北京</option>
+                      <option value="">上海</option>
+                 
+              </select>
+              <select name="gong" id="">
+                <option value="" selected>东城</option>
+                <option value="">上海</option>
+               
+            </select>
+
+         </td>
+         
+     </tr>
+     <tr>
+        
+         <td>街道地址</td>
+         <td colspan="2"><input type="text" name="jie">*<span class="yi">
+             填写县区、街道、门牌号 
+         </span>
+        </td>
+     </tr>
+     <tr>
+         <td>传真号码：</td>
+         <td colspan="2">
+               <input type="text" name="chuan">
+         </td>
+       
+     </tr>
+     <tr>
+         <td>手机号码：</td>
+         <td colspan="2">
+             <input type="text" name="shou">
+         </td>
+       
+     </tr>
+     <tr>
+         <td>邮政编码：</td>
+         <td colspan="2">
+             <input type="text" name="you">
+         </td>
+     
+     </tr>
+     <tr>
+         <td colspan="3">
+             <strong>3.公司名称和主要业务</strong>
+         </td>
+       
+     </tr>
+     <tr>
+         <td>贵公司名称：</td>
+         <td><input type="text" name="gui">*</td>
+         <td><span class="yi">请填写在工商局注册的公司、商号全称无商号的个体经营者填写执照上的姓名，如：张三（
+                个体经营）</span></td>
+     </tr>
+     <tr>
+         <td>你的职位：</td>
+         <td><input type="text" name="ni">*</td>
+         <td>
+             </td>
+     </tr>
+     <tr>
+         <td>主营行业：</td>
+         <td>
+                <select name="zhu" id="">
+                       <option value="">电子电工</option>
+                       <option value="">哈哈</option>
+                </select>
+
+         </td>
+         <td>
+             <span class="yi">请正确选择。您会收到该行业，该产品的供求信息</span>
+             
+         </td>
+     </tr>
+     <tr>
+         <td>主营产品/服务</td>
+         <td colspan="2"><input type="text" name="zhu">*
+        <span class="yi">三个相关产品名/服务名，最少填一个。例如：
+            太阳帽
+        </span>
+        </td>
+        
+     </tr>
+     <tr>
+         <td>公司网址：</td>
+         <td colspan= "2"><input type="text" placeholder="http://"></td>
+     
+     </tr>
+     <tr>
+         <td></td>
+         <td colspan="2"><button name="btn">确认提交</button></td>
+        
+     </tr>
+
+
+
+
+
+
+        </table>
+
+
+   </form>
+
+
+    
+</body>
+</html>
