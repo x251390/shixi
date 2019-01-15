@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+         span{
+             display: inline-block;
+             height:30px;
+             width:30px;
+             background:red;
+             border-radius: 15px;
+
+         }
+    input{
+        display: none;
+    }
+        
+        span:after{
+            display: inline-block;
+    content: "";
+    height: 6px;
+    width: 18px;
+   transform: rotate(-45deg);
+    border: 5px yellow solid;
+    border-color: transparent transparent #fff #fff;
+        }
+         input:checked~span:after {
+    display: inline-block;
+    content: "";
+    height: 6px;
+    width: 18px;
+   transform: rotate(-45deg);
+    border: 5px yellow solid;
+    border-color: transparent transparent yellow yellow;
+}
+    
+    </style>
+</head>
+<body>
+   <div class="box">
+ <input type="checkbox" name="xuan" id="box" >
+ <span>
+
+ </span>
+   <label for="box">你好啊</label>
+
+
+   </div>
+
+
+
+</body>
+</html>
